@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <style>
+        /* Estilos básicos de reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f7;
+        }
+
+        /* Container principal */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            grid-column: span 2;
+            text-align: center;
+            padding: 20px;
+            background-color: #2C3E50;
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Navbar - Barra de navegação */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(44, 62, 80, 0.7); /* Cor de fundo transparente */
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            background-color: rgba(44, 62, 80, 0.9); /* Mudança no hover */
+            border-radius: 5px;
+        }
+
+        /* Estilo de cada bloco de conteúdo */
+        .sobre-nos, .equipe {
+            background-color: #ECF0F1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Títulos da seção */
+        .sobre-nos h2, .equipe h2 {
+            font-size: 2em;
+            color: #34495E;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Texto da seção */
+        .sobre-nos p, .equipe p {
+            font-size: 1.2em;
+            color: #7F8C8D;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Imagem da seção sobre nós */
+        .sobre-nos img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Estilo para os itens da equipe */
+        .equipe .membro {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .equipe .membro:last-child {
+            border-bottom: none;
+        }
+
+        .equipe .membro img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .equipe .membro div {
+            color: #34495E;
+        }
+
+        .equipe .membro h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #2C3E50;
+        }
+
+        .equipe .membro p {
+            margin: 5px 0;
+        }
+
+        /* Responsividade para telas pequenas */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Coluna única em telas menores */
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 2em; /* Reduz o tamanho do título no cabeçalho */
+            }
+
+            .sobre-nos h2, .equipe h2 {
+                font-size: 1.6em;
+            }
+
+            .sobre-nos p, .equipe p {
+                font-size: 1em; /* Reduz o tamanho da fonte para telas pequenas */
+            }
+
+            .equipe .membro {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-bottom: 10px;
+            }
+
+            .equipe .membro img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#sobre-nos">Sobre</a> <!-- Link de ancoragem para a seção 'Sobre Nós' -->
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Bem-vindo à nossa página</h1>
+    </header>
+
+    <!-- Container principal em grid -->
+    <div class="container">
+        <!-- Seção Equipe -->
+        <section class="equipe">
+            <h2>Conheça Nossa Equipe</h2>
+            <div class="membro">
+                <img src="https://via.placeholder.com/80" alt="João Silva">
+                <div>
+                    <h3>João Silva</h3>
+                    <p>CEO e Fundador</p>
+                    <p>João é o fundador da empresa e lidera nossa equipe com paixão e visão estratégica.</p>
+                </div>
+            </div>
+            <div class="membro">
+                <img src="https://via.placeholder.com/80" alt="Ana Costa">
+                <div>
+                    <h3>Ana Costa</h3>
+                    <p>Diretora de Marketing</p>
+                    <p>Ana é responsável pela criação de estratégias de marketing e crescimento da nossa marca.</p>
+                </div>
+            </div>
+            <div class="membro">
+                <img src="https://via.placeholder.com/80" alt="Ricardo Almeida">
+                <div>
+                    <h3>Ricardo Almeida</h3>
+                    <p>Desenvolvedor</p>
+                    <p>Ricardo é nosso especialista em tecnologia, garantindo que todos os nossos sistemas funcionem perfeitamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section id="sobre-nos" class="sobre-nos">
+            <h2>Quem Somos</h2>
+            <p>Somos uma empresa dedicada a oferecer as melhores soluções para nossos clientes. Com mais de 10 anos de experiência, trabalhamos para garantir qualidade, inovação e compromisso em todos os nossos projetos.</p>
+            <img src="https://via.placeholder.com/500x300" alt="Imagem da equipe">
+        </section>
+    </div>
+
+</body>
+</html>
